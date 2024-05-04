@@ -1,0 +1,203 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background-color: darkviolet;
+}
+.wraper {
+  font-size: 16px;
+  background-color: #ffffff;
+  width: 90vw;
+  max-width: 34em;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  padding: 3em;
+  border-radius: 0.6em;
+  /* box-shadow: <przesunięcie poziome> <przesunięcie pionowe> <rozmycie> <rozciągnięcie> <kolor cienia>; */
+  box-shadow: 0 1.2em 2.4em rgba(111, 85, 0, 0.25);
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+#options-container {
+  text-align: center;
+}
+/* to style do elementu div który znajduje się w objekcie z indeksem --- */
+#options-container div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 1.2em 0 2.4em 0;
+}
+
+#options-container button {
+  padding: 0.6em 1.2em;
+  border: 3px solid #000000;
+  background-color: #ffffff;
+  color: #000000;
+  border-radius: 0.3em;
+  text-transform: capitalize; /* robi pierwsze litery z wielkiej litery */
+  transition: all 0.05s ease-in-out;
+  cursor: pointer;
+}
+
+#options-container button:hover {
+  transform: translateY(-3px);
+  background-color: darkviolet;
+  color: #ffffff;
+}
+#options-container button:active {
+  transform: translateY(3px);
+  box-shadow: none;
+}
+#options-container button:disabled {
+  /* odlączone(nieaktywne) - disabled */
+  border: 3px solid #808080;
+  color: #808080;
+  transform: translateY(0);
+  background-color: #efefef;
+  cursor: context-menu;
+}
+#options-container button.active {
+  background-color: darkviolet;
+  border: 3px solid #000000;
+  color: #ffffff;
+}
+
+#options-container #button3 {
+  padding: 0.6em 2.3em;
+}
+.letter-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6em;
+}
+#letter-container button:hover {
+  transform: translateY(-3px);
+  background-color: darkviolet;
+  color: #ffffff;
+}
+#letter-container button:active {
+  transform: translateY(3px);
+  box-shadow: none;
+}
+#letter-container button:disabled {
+  border: 3px solid #000000;
+  color: #ffffff;
+  transform: translateY(0);
+  background-color: darkviolet;
+  cursor: context-menu;
+}
+#letter-container button {
+  height: 2.4em;
+  width: 2.4em;
+  border-radius: 0.3em;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+.new-game-popup {
+  background-color: #fee2ff;
+  position: absolute;
+  left: 15%;
+  top: 34%;
+  height: 33%;
+  width: 69%;
+  display: flex;
+  align-items: center;
+  border: solid;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 0.6em;
+}
+
+#user-input-section {
+  display: flex;
+  justify-content: center;
+  font-size: 1.7em;
+  margin: 0 0 0.7em 0;
+}
+
+canvas {
+  display: block;
+  margin: auto;
+  width: 75%;
+  /* od tego zależy czy będzie wychodzić do dolu i góry wraper  */
+
+  border: 1px solid #000000;
+}
+.hide {
+  display: none;
+}
+#result-text h2 {
+  font-size: 1.8em;
+  text-align: center;
+}
+#result-text p {
+  font-size: 1.25em;
+  text-align: center;
+  margin: 1em 0 1.5em 0;
+}
+#result-text span {
+  font-weight: 600;
+}
+
+#new-game-button {
+  font-size: 1.25em;
+  padding: 0.3em 1.2em;
+  background-color: darkviolet;
+  color: #ffffff;
+  background-color: #ffffff;
+  color: #000000;
+  border: 3px solid #000000;
+  border-radius: 0.2em;
+}
+#new-game-button:hover {
+  transform: translateY(-3px);
+  background-color: darkviolet;
+  color: #ffffff;
+}
+#new-game-button:active {
+  transform: translateY(3px);
+  box-shadow: none;
+}
+.win-msg {
+  color: forestgreen;
+}
+.lose-msg {
+  color: crimson;
+}
+#anuluj_gre {
+  border: 3px solid #000000;
+  text-align: center;
+  margin: auto;
+  color: #000000;
+  margin-top: 1.3em;
+  border-radius: 0.3em;
+  display: block;
+  padding: 0.6em 1.2em;
+  background-color: #ffffff;
+}
+/* tuażna kolejność hovr active i disabled(jeśli hovr będzie ostatni ono bdzie przekryać disabled) */
+#anuluj_gre:hover {
+  transform: translateY(-3px);
+  background-color: darkviolet;
+  color: #ffffff;
+}
+#anuluj_gre:active {
+  transform: translateY(3px);
+  box-shadow: none;
+}
+#anuluj_gre:disabled {
+  border: 3px solid #808080;
+  color: #808080;
+  transform: translateY(0);
+  background-color: #efefef;
+  cursor: context-menu;
+}
